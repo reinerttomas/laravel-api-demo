@@ -25,7 +25,8 @@ Thumbs.db
 taskfile.yaml
 
 # AI files
+/.claude
 /.cursor
 /.junie
 .mcp.json
-.CLAUDE.md
+CLAUDE.md

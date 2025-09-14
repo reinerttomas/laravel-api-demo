@@ -6,6 +6,11 @@
     "rules": {
         "array_push": true,
         "backtick_to_shell_exec": true,
+        "class_attributes_separation": {
+            "elements": {
+                "method": "one"
+            }
+        },
         "concat_space": {
             "spacing": "one"
         },
@@ -55,6 +60,7 @@
         },
         "ordered_interfaces": true,
         "ordered_traits": true,
+        "phpdoc_separation": true,
         "protected_to_private": true,
         "self_accessor": true,
         "self_static_accessor": true,

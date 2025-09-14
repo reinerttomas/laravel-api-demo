@@ -13,7 +13,14 @@ declare(strict_types=1);
 |
 */
 
-pest()->extend(Tests\TestCase::class)
+use Tests\Support\Macros\AssertApiStructure;
+use Tests\Support\Macros\AssertCollectionApiStructure;
+use Tests\Support\Macros\AssertPaginatedApiCount;
+use Tests\Support\Macros\AssertPaginatedApiStructure;
+use Tests\TestCase;
+
+pest()
+    ->extend(TestCase::class)
     ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
     ->in('Feature');
 
@@ -41,7 +48,7 @@ expect()->extend('toBeOne', fn () => $this->toBe(1));
 |
 */
 
-function something(): void
-{
-    // ..
-}
+Illuminate\Testing\TestResponse::macro('assertApiStructure', (new AssertApiStructure())());
+Illuminate\Testing\TestResponse::macro('assertCollectionApiStructure', (new AssertCollectionApiStructure())());
+Illuminate\Testing\TestResponse::macro('assertPaginatedApiCount', (new AssertPaginatedApiCount())());
+Illuminate\Testing\TestResponse::macro('assertPaginatedApiStructure', (new AssertPaginatedApiStructure())());
