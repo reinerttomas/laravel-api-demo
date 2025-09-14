@@ -1,0 +1,13 @@
+parameters:
+	level: 6
+
+	paths:
+		- app
+		- config
+		- bootstrap
+		- database
+		- tests
+
+	ignoreErrors:
+	    -
+	        message: '#Undefined variable: \$this*#'
