@@ -9,7 +9,7 @@ use Illuminate\Testing\TestResponse;
 use Tests\Structure\Structure;
 
 /**
- * @method TestResponse<\Illuminate\Http\JsonResponse> assertJsonStructure(Structure $structure, array<string|int, mixed>|null $responseData = null)
+ * @mixin TestResponse<\Illuminate\Http\JsonResponse>
  */
 final readonly class AssertApiStructure
 {

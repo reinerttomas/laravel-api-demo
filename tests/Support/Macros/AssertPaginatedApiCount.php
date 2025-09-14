@@ -8,7 +8,7 @@ use Closure;
 use Illuminate\Testing\TestResponse;
 
 /**
- * @method TestResponse<\Illuminate\Http\JsonResponse> assertJsonCount(int $count, string $key)
+ * @mixin TestResponse<\Illuminate\Http\JsonResponse>
  */
 final readonly class AssertPaginatedApiCount
 {
