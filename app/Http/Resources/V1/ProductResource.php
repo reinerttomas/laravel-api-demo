@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Resources\V1;
 
+use App\Http\Resources\V1\Common\MoneyResource;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -25,18 +26,8 @@ final class ProductResource extends JsonResource
              * @var int
              */
             'id' => $this->id,
-
             'name' => $this->name,
-
-            /**
-             * @var int
-             */
-            'price' => $this->price,
-
-            /**
-             * @var \App\Enums\Currency
-             */
-            'currency' => $this->currency,
+            'price' => MoneyResource::make($this->price),
 
             /**
              * @var \Carbon\CarbonImmutable

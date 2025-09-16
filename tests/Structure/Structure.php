@@ -12,7 +12,7 @@ use Illuminate\Contracts\Support\Arrayable;
 abstract readonly class Structure implements Arrayable
 {
     /**
-     * @return array<array-key, mixed>
+     * @return list<string>|array<array-key, mixed>
      */
     abstract public function toArray(): array;
 }
