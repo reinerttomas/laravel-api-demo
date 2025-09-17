@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUnusedPublicMethodParameterRector;
+use Rector\Php83\Rector\ClassMethod\AddOverrideAttributeToOverriddenMethodsRector;
 use RectorLaravel\Set\LaravelLevelSetList;
 
 return RectorConfig::configure()
@@ -27,6 +28,7 @@ return RectorConfig::configure()
         strictBooleans: true,
     )
     ->withSkip([
+        AddOverrideAttributeToOverriddenMethodsRector::class,
         RemoveUnusedPublicMethodParameterRector::class => [
             __DIR__ . '/app/Policies/*',
         ],
