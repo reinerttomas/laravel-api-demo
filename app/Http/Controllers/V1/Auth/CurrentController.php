@@ -10,7 +10,7 @@ use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Container\Attributes\CurrentUser;
 
 #[Group(name: 'Auth')]
-final class CurrentController
+final readonly class CurrentController
 {
     /**
      * Current

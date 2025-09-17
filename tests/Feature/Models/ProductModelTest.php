@@ -12,8 +12,6 @@ test('price is cast as money', function (): void {
         'currency' => Currency::USD,
     ]);
 
-    ray($product->price->formatByDecimal());
-
     expect($product->price)
         ->toBeInstanceOf(Money::class)
         ->and($product->price->getAmount())->toBe('1999')

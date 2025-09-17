@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 #[Group('Users')]
-final class UserController
+final readonly class UserController
 {
     /**
      * Index
