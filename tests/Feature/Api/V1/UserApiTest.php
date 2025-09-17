@@ -16,7 +16,7 @@ describe('Index', function (): void {
             ->getJson('/api/v1/users')
             ->assertStatus(200)
             ->assertPaginatedApiCount(3)
-            ->assertPaginatedApiStructure(new UserStructure());
+            ->assertPaginatedApiStructure(new UserStructure);
     });
 
     it('fails 401 when not authenticated', function (): void {
@@ -35,7 +35,7 @@ describe('Show', function (): void {
         actingAs($user)
             ->getJson("/api/v1/users/$user->id")
             ->assertStatus(200)
-            ->assertApiStructure(new UserStructure());
+            ->assertApiStructure(new UserStructure);
     });
 
     it('fails 401 when not authenticated', function (): void {
