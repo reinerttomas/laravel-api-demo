@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
+use Rector\DeadCode\Rector\ClassMethod\RemoveUnusedPublicMethodParameterRector;
 use RectorLaravel\Set\LaravelLevelSetList;
 
 return RectorConfig::configure()
@@ -25,4 +26,9 @@ return RectorConfig::configure()
         earlyReturn: true,
         strictBooleans: true,
     )
+    ->withSkip([
+        RemoveUnusedPublicMethodParameterRector::class => [
+            __DIR__ . '/app/Policies/*',
+        ],
+    ])
     ->withPhpSets();

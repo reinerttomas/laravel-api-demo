@@ -17,5 +17,9 @@ parameters:
 	        path: tests
 
 	    -
+	        message: '#Access to an undefined property PHPUnit\\Framework\\TestCase::*#'
+	        path: tests
+
+	    -
 	        message: '#Call to an undefined method Illuminate\\Testing\\TestResponse::*#'
 	        path: tests

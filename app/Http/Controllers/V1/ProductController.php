@@ -8,7 +8,7 @@ use App\Actions\Products\CreateProductAction;
 use App\Actions\Products\DeleteProductAction;
 use App\Actions\Products\UpdateProductAction;
 use App\Http\Requests\IndexRequest;
-use App\Http\Requests\ProductRequest;
+use App\Http\Requests\V1\ProductRequest;
 use App\Http\Resources\V1\ProductResource;
 use App\Models\Product;
 use Dedoc\Scramble\Attributes\Group;
